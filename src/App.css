@@ -1,0 +1,118 @@
+
+/* instruction card */
+.tiles {
+  display: flex;
+}
+
+.tile {
+  display: flex;
+  border: solid 2px grey;
+  height: 31px;
+  width: 31px;
+  justify-content: center;
+  align-items: center;
+  font-weight:700;
+  margin-right: 3px;
+  margin-bottom: 3px;
+  font-size: 220%;
+  padding-bottom: 3px;
+}
+
+.tile.corr_spot {
+  background-color: #538d4e;
+  border-color: #538d4e;
+}
+
+.tile.wro_spot {
+  background-color: #b59f3b;
+  border-color: #b59f3b;
+}
+
+.tile.wrong {
+  background-color: #3a3a3c;
+  border-color: #3a3a3c;
+}
+
+.tile.corr_spot, .tile.wro_spot, .tile.wrong {
+  color: white;
+}
+
+#modal_container {
+  padding: 65px 65px 65px 65px;
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  height: 50px;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav_button {
+  border: none;
+  height: 50px;
+  width: 50px;
+  background-color: white;
+}
+
+.nav_button:hover {
+  background-color: rgb(204, 204, 204);
+}
+
+/* main */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tile_highlight {
+  border-color: #565758;
+}
+
+.top_row, .mid_row, .bot_row {
+  display: flex;
+  height: 55px;
+}
+
+.mid_row {
+  justify-content: center;
+}
+
+#game_board {
+  margin: 40px;
+}
+
+#game_board > .tiles > .tile {
+  height: 60px;
+  width: 60px;
+}
+
+.keys {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgray;
+  width: 35px;
+  border-radius: 3px;
+  margin: 3px 3px 3px 3px;
+  font-weight: 700;
+  font-size: large;
+}
+
+.action_keys{
+  width: 55px;
+  font-size: small;
+}
+
+/* settings */
+span {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+hr {
+  height: 
+}
