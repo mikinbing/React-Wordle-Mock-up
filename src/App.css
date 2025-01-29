@@ -71,12 +71,12 @@ main {
   border-color: #565758;
 }
 
-.top_row, .mid_row, .bot_row {
+.row {
   display: flex;
   height: 55px;
 }
 
-.mid_row {
+.row:nth-child(even) {
   justify-content: center;
 }
 
@@ -99,6 +99,7 @@ main {
   margin: 3px 3px 3px 3px;
   font-weight: 700;
   font-size: large;
+  border: none;
 }
 
 .action_keys{
@@ -111,8 +112,4 @@ span {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-hr {
-  height: 
 }

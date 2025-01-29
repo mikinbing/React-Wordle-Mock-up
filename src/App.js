@@ -1,9 +1,9 @@
 import React from 'react';
-import Navbar from './Navbar';
-import Main from './Main';
+import Navbar from './components/Navbar';
+import Main from './components/Main';
 import './App.css';
-import InstructModal from './InstructModal';
-import SettingsModal from './SettingsModal';
+import InstructModal from './components/InstructModal';
+import SettingsModal from './components/SettingsModal';
 
 export default function App() {
   const [showInstructions, setShowInstructions] = React.useState(true);

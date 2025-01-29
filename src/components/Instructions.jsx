@@ -1,4 +1,6 @@
 /* eslint-disable react/react-in-jsx-scope */
+// import './Instructions.css'
+
 export default function Instructions(){
     return (
         <div id="modal_container">
