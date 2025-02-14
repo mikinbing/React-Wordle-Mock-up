@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Grow, Modal, Button } from '@mui/material';
+import { Card, CardHeader, Modal, Button } from '@mui/material';
 import Instructions from './Instructions';
 import { faClose } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -25,6 +25,14 @@ export default function InstructModal(props) {
               onClose={handleClose}>
                 {/* <Grow in={props.show}> */}
                     <Card sx={style}>
+                        <CardHeader
+                                action={
+                                    <Button onClick={handleClose}>
+                                        <FontAwesomeIcon icon={faClose} style={{height: 30, color: 'black'}}/>
+                                    </Button>
+                                }
+                                sx={{padding: 0}}
+                            />
                         <Instructions />
                     </Card>
                 {/* </Grow> */}

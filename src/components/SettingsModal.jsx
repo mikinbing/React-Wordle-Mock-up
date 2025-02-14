@@ -1,5 +1,6 @@
 import React from 'react';
-import { Card, Grow, Modal, Button, Switch } from '@mui/material';
+import { Context } from '../contexts/Contexts';
+import { Button, Card, CardContent, CardHeader, Modal, Switch } from '@mui/material';
 import { faClose } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -17,19 +18,33 @@ export default function SettingsModal(props) {
         flexDirection: "column",
     };
 
+    const { isKeyboardDisabled, setIsKeyboardDisabled } = React.useContext(Context)
     const handleClose = () => props.setShow(false)
+    const handleKeyboardSwitch = () => {
+        setIsKeyboardDisabled((prevKeyboardState) => !prevKeyboardState)
+    }
     return (
             <Modal
               open={props.show}
               onClose={handleClose}>
                 {/* <Grow in={props.show}> */}
                     <Card sx={style}>
-                        <div id='modal_container'>
-                            <h2>Settings</h2>
-                            <span><h3>Dark Mode</h3> <Switch /></span>
-                            <hr/>
-                            <span><h3>Onscreen Keyboard Input Only</h3> <Switch /></span>
-                        </div>
+                        <CardHeader
+                            action={
+                                <Button onClick={handleClose}>
+                                    <FontAwesomeIcon icon={faClose} style={{height: 30, color: 'black'}}/>
+                                </Button>
+                            }
+                            sx={{padding: 0}}
+                        />
+                        <CardContent>
+                            <div id='modal_container'>
+                                <h2>Settings</h2>
+                                <span><h3>Dark Mode</h3> <Switch /></span>
+                                <hr/>
+                                <span><h3>Onscreen Keyboard Input Only</h3> <Switch onChange={handleKeyboardSwitch} checked={isKeyboardDisabled}/></span>
+                            </div>
+                        </CardContent>
                     </Card>
                 {/* </Grow> */}
             </Modal>

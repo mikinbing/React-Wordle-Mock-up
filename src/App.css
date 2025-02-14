@@ -107,6 +107,12 @@ main {
   font-size: small;
 }
 
+/* stops the icon from intercepting click events */
+svg {
+  pointer-events: none;
+}
+
+
 /* settings */
 span {
   display: flex;
